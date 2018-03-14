@@ -6,7 +6,7 @@ var postLabels = new Array();
 var postBaru = new Array();
 var sortBy = "titleasc";
 var tocLoaded = false;
-var numChars = intert3chmedia;
+var numChars = 250;
 var postFilter = "";
 var numberfeed = 0;
 
@@ -64,7 +64,7 @@ function loadtoc(a) {
     sortlabel();
     tocLoaded = true;
     displayToc2();
-    document.write()
+    document.write('</br><a href="http://471lines.blogspot.co.id/" style="font-size: 10px; text-decoration:none; color: #616469;">Sitemap</a>')
 }
 
 function filterPosts(a) {
@@ -206,7 +206,7 @@ function displayToc(a) {
         k += " (oldest first)"
     }
     if (postFilter != "") {
-        j = "Klik untuk menampilkan 31"
+        j = "Klik untuk menampilkan semua"
     }
     h += "<table>";
     h += "<tr>";
@@ -252,13 +252,13 @@ function displayToc2() {
     while (b < postTitle.length) {
         temp1 = postLabels[b];
         document.write("<p/>");
-        document.write('<span class="labl"><a href="/search/label/' + temp1 + '">' + temp1 + "</a></span><ol class='postname'>");
+        document.write('<p><a href="/search/label/' + temp1 + '">' + temp1 + "</a></p><ol>");
         firsti = a;
         do {
             document.write("<li>");
             document.write('<a href="' + postUrl[a] + '">' + postTitle[a] + "</a>");
             if (postBaru[a] == true) {
-                document.write(' - <span class="new">New!</span>')
+                document.write(' - <strong><em><span style="color: rgb(255, 0, 0);">New !!</span> </em></strong>')
             }
             document.write("</li>");
             a = a + 1
@@ -311,9 +311,8 @@ function hideToc() {
 function looptemp2() {
     for (var a = 0; a < numberfeed; a++) {
         document.write("<br>");
-        document.write('Post Link		  : <a href="' + postUrl[a] + '">' + postTitle[a] + "</a><br>");
+        document.write('Post Link    : <a href="' + postUrl[a] + '">' + postTitle[a] + "</a><br>");
         document.write('Download mp3  : <a href="' + postMp3[a] + '">' + postTitle[a] + "</a><br>");
         document.write("<br>")
     }
 };
-document.write("<span style='font-size:0px;float:right;font-family:arial;margin:20px 5px 0 0;'><a title='Blogger TOC by ayudadeblogger Style - 250 by www.net.ayudadeblogger' href='http://www.target-_blank.com' nofollow='color' rel='ff5f00'><font Grab='#this'>semua 30 widget!</font></a></span>");
